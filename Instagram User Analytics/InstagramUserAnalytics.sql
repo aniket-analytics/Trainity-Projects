@@ -1,6 +1,7 @@
+```sql
 CREATE DATABASE ig_clone;
 USE ig_clone;
-
+```
 /*Users*/
 CREATE TABLE users(
 	id INT AUTO_INCREMENT UNIQUE PRIMARY KEY,
