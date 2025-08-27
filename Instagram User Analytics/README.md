@@ -31,8 +31,6 @@ This project demonstrates SQL skills for analyzing user activity and engagement 
   * `likes` – Likes made by users on photos.
   * `tags` & `photo_tags` – Hashtags associated with photos.
 
-The project was executed using [db-fiddle.com](https://www.db-fiddle.com) with MySQL 8.0.
-
 ---
 
 ## 🔍 Marketing Use Cases & Queries
