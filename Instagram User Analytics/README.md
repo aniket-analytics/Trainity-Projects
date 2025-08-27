@@ -164,5 +164,5 @@ The insights derived are valuable for marketing teams, business strategy, and pl
 
 This project is part of my SQL portfolio demonstrating data analysis for social media platforms.
 
-* **LinkedIn**: [Connect with me](https://www.linkedin.com/in/aniket-yadav-/)
-* **Gmail**: [andyyadav12@gmail.com](mailto:andyyadav12@gmail.com)
+- **LinkedIn**: [Connect with me professionally](https://www.linkedin.com/in/aniket-yadav-/)
+- **Gmail**: [Connect with me professionally](mailto:andyyadav12@gmail.com)
