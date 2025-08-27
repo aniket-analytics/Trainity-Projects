@@ -108,22 +108,8 @@ FROM ig_clone.users
 GROUP BY 1
 ORDER BY 2 DESC;
 
----
-
--- Average number of posts per user
-
-WITH CTE AS (
-  SELECT u.id AS userid, COUNT(p.id) AS photoid
-  FROM ig_clone.users u
-  LEFT JOIN ig_clone.photos p ON u.id = p.user_id
-  GROUP BY u.id
-)
-SELECT SUM(photoid)/COUNT(userid) AS photo_per_user
-FROM CTE
-WHERE photoid > 0;
-
--- Total photos, users, and average photos per user
-
+-- Provide how many times does average user posts on Instagram. 
+-- Also, provide the total number of photos on Instagram/total number of users
 WITH CTE AS (
   SELECT u.id AS userid, COUNT(p.id) AS photoid
   FROM ig_clone.users u
