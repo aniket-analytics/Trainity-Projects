@@ -1,6 +1,6 @@
-/*CREATE DATABASE ig_clone;
+CREATE DATABASE ig_clone;
 
-USE ig_clone;*/
+USE ig_clone;
 
 /*Users*/
 CREATE TABLE users(
@@ -174,4 +174,3 @@ SELECT *
 FROM photo_count
 WHERE num_like = (SELECT COUNT(*) FROM ig_clone.photos);
 ```
-
