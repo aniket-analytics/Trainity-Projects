@@ -66,12 +66,11 @@ CREATE TABLE photo_tags(
 
 -- Find the 5 oldest (most loyal) users
 
-```sql
 SELECT username, created_at
 FROM ig_clone.users
 ORDER BY created_at
 LIMIT 5;
-```
+
 -- Find users who have never posted a photo
 
 ```sql
