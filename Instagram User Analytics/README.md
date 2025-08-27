@@ -166,3 +166,5 @@ This project is part of my SQL portfolio demonstrating data analysis for social 
 
 - **LinkedIn**: [Connect with me professionally](https://www.linkedin.com/in/aniket-yadav-/)
 - **Gmail**: [Connect with me professionally](mailto:andyyadav12@gmail.com)
+
+Thank you for your support, and I look forward to connecting with you!
