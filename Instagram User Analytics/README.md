@@ -111,7 +111,7 @@ SELECT
 FROM CTE;
 ```
 
-### 📌 Q3: Detect possible bot accounts (users who liked all photos)
+### 📌 Q2: Detect possible bot accounts (users who liked all photos)
 
 ```sql
 WITH photo_count AS (
