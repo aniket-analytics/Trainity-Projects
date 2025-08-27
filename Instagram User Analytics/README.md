@@ -182,7 +182,3 @@ This project is part of my SQL portfolio demonstrating data analysis for social 
 
 * **LinkedIn**: [Connect with me](https://www.linkedin.com/in/aniket-yadav-/)
 * **Gmail**: [andyyadav12@gmail.com](mailto:andyyadav12@gmail.com)
-
----
-
-Let me know if you'd like this in `.docx` or `.pdf` format or want a `README.md` file generated for direct download.
