@@ -3,7 +3,7 @@
 ## 🧾 Project Overview
 
 **Project Title**: Instagram User Analytics  
-**Level**: Beginner  
+**Level**: Intermediate  
 **Database**: `ig_clone`  
 
 This project demonstrates SQL skills for analyzing user activity and engagement on a simulated Instagram-like platform. The focus is on answering business questions relevant to marketing and investor teams, using SQL queries to extract insights from user, post, like, and hashtag data.
