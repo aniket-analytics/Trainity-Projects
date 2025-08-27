@@ -64,7 +64,7 @@ CREATE TABLE photo_tags(
 	PRIMARY KEY(photo_id,tag_id)
 );
 
-### 📌 Q1: Find the 5 oldest (most loyal) users
+-- Find the 5 oldest (most loyal) users
 
 ```sql
 SELECT username, created_at
@@ -72,8 +72,7 @@ FROM ig_clone.users
 ORDER BY created_at
 LIMIT 5;
 ```
-
-### 📌 Q2: Find users who have never posted a photo
+-- Find users who have never posted a photo
 
 ```sql
 SELECT u.username
