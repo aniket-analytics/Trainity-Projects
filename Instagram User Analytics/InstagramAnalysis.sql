@@ -73,17 +73,14 @@ LIMIT 5;
 
 -- Find users who have never posted a photo
 
-```sql
 SELECT u.username
 FROM ig_clone.users u
 LEFT JOIN ig_clone.photos p ON u.id = p.user_id
 WHERE p.user_id IS NULL
 ORDER BY u.username;
-```
 
-### 📌 Q3: Identify contest winner (most likes on a single photo)
+-- Identify contest winner (most likes on a single photo)
 
-```sql
 SELECT username
 FROM (
   SELECT likes.photo_id, users.username, COUNT(likes.user_id) AS like_user
@@ -94,35 +91,27 @@ FROM (
   ORDER BY like_user DESC
   LIMIT 1
 ) base;
-```
 
-### 📌 Q4: Top 5 most used hashtags
+-- Top 5 most used hashtags
 
-```sql
 SELECT t.tag_name, COUNT(p.photo_id) AS num_tags
 FROM ig_clone.photo_tags p
 INNER JOIN ig_clone.tags t ON p.tag_id = t.id
 GROUP BY t.tag_name
 ORDER BY num_tags DESC
 LIMIT 5;
-```
 
-### 📌 Q5: Find best day of the week to launch ad campaigns
+-- Find best day of the week to launch ad campaigns
 
-```sql
 SELECT WEEKDAY(created_at) AS weekday, COUNT(username) AS num_users
 FROM ig_clone.users
 GROUP BY 1
 ORDER BY 2 DESC;
-```
-
-> Days: 0 = Monday, ..., 6 = Sunday
 
 ---
 
-### 📌 Q1: Average number of posts per user
+-- Average number of posts per user
 
-```sql
 WITH CTE AS (
   SELECT u.id AS userid, COUNT(p.id) AS photoid
   FROM ig_clone.users u
@@ -132,11 +121,9 @@ WITH CTE AS (
 SELECT SUM(photoid)/COUNT(userid) AS photo_per_user
 FROM CTE
 WHERE photoid > 0;
-```
 
-### 📌 Q2: Total photos, users, and average photos per user
+-- Total photos, users, and average photos per user
 
-```sql
 WITH CTE AS (
   SELECT u.id AS userid, COUNT(p.id) AS photoid
   FROM ig_clone.users u
@@ -148,11 +135,9 @@ SELECT
   COUNT(userid) AS total_users,
   SUM(photoid)/COUNT(userid) AS photo_per_user
 FROM CTE;
-```
 
-### 📌 Q3: Detect possible bot accounts (users who liked all photos)
+-- Detect possible bot accounts (users who liked all photos)
 
-```sql
 WITH photo_count AS (
   SELECT user_id, COUNT(photo_id) AS num_like
   FROM ig_clone.likes
@@ -161,4 +146,3 @@ WITH photo_count AS (
 SELECT * 
 FROM photo_count
 WHERE num_like = (SELECT COUNT(*) FROM ig_clone.photos);
-```
