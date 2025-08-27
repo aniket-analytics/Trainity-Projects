@@ -1,229 +1,192 @@
-# SQL-Project-Instagram-User-Analytics
+Here’s a complete `README.md` for your **Instagram User Analytics** SQL project, following the same style as your **Retail Sales Analysis** README. You can copy this directly into a `README.md` file for GitHub or any portfolio:
 
-## Project Overview
+---
 
-**Project Title**: Instagram User Analytics  
-**Level**: Beginner  
+# 📊 Instagram User Analytics – SQL Project
+
+## 🧾 Project Overview
+
+**Project Title**: Instagram User Analytics
+**Level**: Beginner
 **Database**: `ig_clone`
 
-This project demonstrates SQL skills and techniques used by data analysts to explore and analyze Instagram user behavior data. The project focuses on helping marketing teams launch effective campaigns and providing investors with insights into platform performance and user engagement patterns.
+This project demonstrates SQL skills for analyzing user activity and engagement on a simulated Instagram-like platform. The focus is on answering business questions relevant to marketing and investor teams, using SQL queries to extract insights from user, post, like, and hashtag data.
 
-## Objectives
+---
 
-1. **Marketing Analysis**: Support marketing team campaigns by analyzing user behavior and engagement patterns.
-2. **User Engagement Assessment**: Measure platform activity and user posting frequency.
-3. **Contest Management**: Identify contest winners based on photo engagement metrics.
-4. **Hashtag Strategy**: Research and recommend optimal hashtags for maximum reach.
-5. **Ad Campaign Optimization**: Determine the best days for launching advertising campaigns.
-6. **Platform Health**: Assess Instagram's performance and identify potential bot accounts.
+## 🎯 Objectives
 
-## Project Structure
+1. **Database Setup**: Create and populate an Instagram-style database using raw data.
+2. **Marketing Insights**: Help the marketing team with user retention, campaign planning, and hashtag analysis.
+3. **Investor Metrics**: Provide metrics on user engagement, platform health, and potential fake activity.
+4. **SQL Query Practice**: Solve realistic business problems using SQL joins, aggregations, and filtering.
+
+---
+
+## 🗂️ Project Structure
 
 ### 1. Database Setup
 
-- **Database**: The project uses the `ig_clone` database containing Instagram-like user data.
-- **Tables Used**: 
-  - `users`: User information and registration data
-  - `photos`: Photo posts and metadata
-  - `likes`: User likes on photos
-  - `photo_tags`: Photo-hashtag relationships
-  - `tags`: Hashtag information
+* **Database**: A MySQL database named `ig_clone` was used.
+* **Tables**: Key tables include:
 
-### 2. Marketing Analysis
+  * `users` – User info like username and account creation date.
+  * `photos` – Posts made by users.
+  * `likes` – Likes made by users on photos.
+  * `tags` & `photo_tags` – Hashtags associated with photos.
 
-The marketing team requires insights for campaign planning and user engagement strategies.
+The project was executed using [db-fiddle.com](https://www.db-fiddle.com) with MySQL 8.0.
 
-#### A. Rewarding Most Loyal Users
-**Objective**: Find the 5 oldest users on the platform for loyalty rewards.
+---
+
+## 🔍 Marketing Use Cases & Queries
+
+### 📌 Q1: Find the 5 oldest (most loyal) users
 
 ```sql
-SELECT
-    username,
-    created_at
-FROM
-    ig_clone.users
+SELECT username, created_at
+FROM ig_clone.users
 ORDER BY created_at
 LIMIT 5;
 ```
 
-#### B. Reactivating Inactive Users
-**Objective**: Identify users who have never posted photos for targeted email campaigns.
+### 📌 Q2: Find users who have never posted a photo
 
 ```sql
-SELECT
-    u.username
-FROM
-    ig_clone.users u
-LEFT JOIN
-    ig_clone.photos p ON u.id = p.user_id
-WHERE
-    p.user_id IS NULL
-ORDER BY
-    u.username;
+SELECT u.username
+FROM ig_clone.users u
+LEFT JOIN ig_clone.photos p ON u.id = p.user_id
+WHERE p.user_id IS NULL
+ORDER BY u.username;
 ```
 
-#### C. Contest Winner Declaration
-**Objective**: Find the user with the most likes on a single photo to declare contest winner.
+### 📌 Q3: Identify contest winner (most likes on a single photo)
 
 ```sql
-SELECT username FROM
-(
-    SELECT
-        likes.photo_id,
-        users.username,
-        COUNT(likes.user_id) AS like_count
-    FROM
-        ig_clone.likes likes
-    INNER JOIN
-        ig_clone.photos photos ON likes.photo_id = photos.id
-    INNER JOIN
-        ig_clone.users users ON photos.user_id = users.id
-    GROUP BY
-        likes.photo_id, users.username
-    ORDER BY
-        like_count DESC
-    LIMIT 1
+SELECT username
+FROM (
+  SELECT likes.photo_id, users.username, COUNT(likes.user_id) AS like_user
+  FROM ig_clone.likes
+  INNER JOIN ig_clone.photos ON likes.photo_id = photos.id
+  INNER JOIN ig_clone.users ON photos.user_id = users.id
+  GROUP BY likes.photo_id, users.username
+  ORDER BY like_user DESC
+  LIMIT 1
 ) base;
 ```
 
-#### D. Hashtag Research
-**Objective**: Identify top 5 most commonly used hashtags for brand partnership campaigns.
+### 📌 Q4: Top 5 most used hashtags
 
 ```sql
-SELECT
-    t.tag_name,
-    COUNT(p.photo_id) AS usage_count
-FROM
-    ig_clone.photo_tags p
-INNER JOIN
-    ig_clone.tags t ON p.tag_id = t.id
-GROUP BY
-    tag_name
-ORDER BY
-    usage_count DESC
+SELECT t.tag_name, COUNT(p.photo_id) AS num_tags
+FROM ig_clone.photo_tags p
+INNER JOIN ig_clone.tags t ON p.tag_id = t.id
+GROUP BY t.tag_name
+ORDER BY num_tags DESC
 LIMIT 5;
 ```
 
-#### E. Optimal Ad Campaign Timing
-**Objective**: Determine the best day of the week to launch ad campaigns based on user registration patterns.
+### 📌 Q5: Find best day of the week to launch ad campaigns
 
 ```sql
--- Day mapping: 0=Monday, 1=Tuesday, 2=Wednesday, 3=Thursday, 4=Friday, 5=Saturday, 6=Sunday
-SELECT
-    WEEKDAY(created_at) AS weekday,
-    COUNT(username) AS registration_count
-FROM
-    ig_clone.users
+SELECT WEEKDAY(created_at) AS weekday, COUNT(username) AS num_users
+FROM ig_clone.users
 GROUP BY 1
 ORDER BY 2 DESC;
 ```
 
-### 3. Investor Metrics
+> Days: 0 = Monday, ..., 6 = Sunday
 
-Investors need insights into platform performance and user engagement health.
+---
 
-#### A. User Engagement Analysis
-**Objective**: Calculate average posts per user and overall platform activity metrics.
+## 📈 Investor Metrics & Queries
 
-```sql
-WITH user_photo_counts AS (
-    SELECT
-        u.id AS user_id,
-        COUNT(p.id) AS photo_count
-    FROM
-        ig_clone.users u
-    LEFT JOIN
-        ig_clone.photos p ON u.id = p.user_id
-    GROUP BY
-        u.id
-)
-SELECT
-    SUM(photo_count)/COUNT(user_id) AS photos_per_active_user
-FROM
-    user_photo_counts
-WHERE
-    photo_count > 0;
-
--- Overall platform metrics
-SELECT
-    SUM(photo_count) AS total_photos,
-    COUNT(user_id) AS total_users,
-    SUM(photo_count)/COUNT(user_id) AS photos_per_user_overall
-FROM
-    user_photo_counts;
-```
-
-#### B. Bot Detection Analysis
-**Objective**: Identify potential bot accounts that have liked every photo on the platform.
+### 📌 Q1: Average number of posts per user
 
 ```sql
-WITH user_like_counts AS (
-    SELECT
-        user_id,
-        COUNT(photo_id) AS total_likes
-    FROM
-        ig_clone.likes
-    GROUP BY
-        user_id
-    ORDER BY
-        total_likes DESC
+WITH CTE AS (
+  SELECT u.id AS userid, COUNT(p.id) AS photoid
+  FROM ig_clone.users u
+  LEFT JOIN ig_clone.photos p ON u.id = p.user_id
+  GROUP BY u.id
 )
-SELECT *
-FROM
-    user_like_counts
-WHERE
-    total_likes = (SELECT COUNT(*) FROM ig_clone.photos);
+SELECT SUM(photoid)/COUNT(userid) AS photo_per_user
+FROM CTE
+WHERE photoid > 0;
 ```
 
-## Key Findings
+### 📌 Q2: Total photos, users, and average photos per user
 
-- **Loyal User Base**: Identified the 5 most loyal users based on account creation date for targeted reward campaigns.
-- **Inactive Users**: Discovered users who haven't posted any photos, representing opportunities for re-engagement campaigns.
-- **Contest Insights**: Successfully identified contest winner based on photo engagement metrics.
-- **Hashtag Strategy**: Top 5 hashtags provide clear direction for brand partnerships and content strategy.
-- **Peak Registration Days**: Identified optimal days for ad campaign launches based on historical user registration patterns.
-- **User Engagement**: Calculated average posting frequency to assess platform health and user activity levels.
-- **Bot Detection**: Identified potential bot accounts through abnormal liking patterns for platform integrity.
+```sql
+WITH CTE AS (
+  SELECT u.id AS userid, COUNT(p.id) AS photoid
+  FROM ig_clone.users u
+  LEFT JOIN ig_clone.photos p ON u.id = p.user_id
+  GROUP BY u.id
+)
+SELECT 
+  SUM(photoid) AS total_photos,
+  COUNT(userid) AS total_users,
+  SUM(photoid)/COUNT(userid) AS photo_per_user
+FROM CTE;
+```
 
-## Business Impact
+### 📌 Q3: Detect possible bot accounts (users who liked all photos)
 
-### Marketing Team Benefits:
-- **Targeted Campaigns**: Data-driven insights for user segmentation and campaign targeting
-- **Content Strategy**: Hashtag recommendations for maximum reach and engagement
-- **Timing Optimization**: Optimal ad campaign scheduling based on user behavior patterns
-- **User Retention**: Identification of inactive users for re-engagement initiatives
+```sql
+WITH photo_count AS (
+  SELECT user_id, COUNT(photo_id) AS num_like
+  FROM ig_clone.likes
+  GROUP BY user_id
+)
+SELECT * 
+FROM photo_count
+WHERE num_like = (SELECT COUNT(*) FROM ig_clone.photos);
+```
 
-### Investor Insights:
-- **Platform Health**: User engagement metrics demonstrate platform vitality
-- **Growth Potential**: Analysis of user posting behavior and platform activity
-- **Quality Assurance**: Bot detection capabilities ensure authentic user base
-- **Performance Benchmarks**: Clear metrics for comparing platform performance over time
+---
 
-## Technical Implementation
+## 📊 Findings
 
-- **Database**: MySQL v8.0
-- **Platform**: DB-Fiddle (https://www.db-fiddle.com/)
-- **Query Techniques**: JOINs, CTEs, Window Functions, Aggregations, Subqueries
-- **Analysis Focus**: User behavior patterns, engagement metrics, and platform health indicators
+* **Loyal Users**: The oldest users are early adopters, useful for loyalty campaigns.
+* **Inactive Users**: Several users have never posted, which can be targeted via reminders.
+* **Engagement Leader**: Contest winners can be identified based on like count per photo.
+* **Hashtag Strategy**: Top 5 hashtags provide direction for better content reach.
+* **Ad Timing**: Most user registrations happen on a specific day of the week—ideal for campaign launches.
+* **Platform Activity**: Healthy average post count per user; useful metric for investors.
+* **Bot Detection**: SQL can help identify suspicious user patterns like liking every photo.
 
-## Reports Generated
+---
 
-- **Marketing Report**: User loyalty, contest results, and hashtag recommendations
-- **Engagement Report**: User activity levels and posting frequency analysis  
-- **Platform Health Report**: Bot detection and user authenticity metrics
-- **Campaign Optimization Report**: Timing recommendations and user segmentation insights
+## 📝 Reports
 
-## Conclusion
+* **User Report**: Oldest users, inactive users, and top contest winner.
+* **Hashtag Report**: Top-performing hashtags.
+* **Ad Campaign Report**: Best day to launch ads based on user registration trends.
+* **Engagement Report**: Average posts per user, total photos, and bot detection.
 
-This project demonstrates comprehensive SQL analysis capabilities for social media platform analytics. The insights generated support both marketing initiatives and investor decision-making by providing clear, data-driven recommendations for platform growth and user engagement optimization.
+---
 
-The analysis reveals Instagram's healthy user engagement patterns while identifying opportunities for improved marketing campaigns and platform integrity measures.
+## ✅ Conclusion
 
-## Author - Aniket Yadav
+This project showcases how SQL can be applied to real-world social media analytics. It covers:
 
-This project is part of my portfolio to showcase data analysis using SQL for social media analytics.
+* Data extraction & joining
+* Aggregations & filtering
+* Answering marketing and investor queries
+* Detecting suspicious activity
 
-- **LinkedIn**: [Connect with me professionally](https://www.linkedin.com/in/aniket-yadav-/)
-- **Gmail**: [Connect with me professionally](mailto:andyyadav12@gmail.com)
+The insights derived are valuable for marketing teams, business strategy, and platform growth monitoring.
 
-Thank you for your support, and I look forward to connecting with you!
+---
+
+## 👨‍💻 Author – Aniket Yadav
+
+This project is part of my SQL portfolio demonstrating data analysis for social media platforms.
+
+* **LinkedIn**: [Connect with me](https://www.linkedin.com/in/aniket-yadav-/)
+* **Gmail**: [andyyadav12@gmail.com](mailto:andyyadav12@gmail.com)
+
+---
+
+Let me know if you'd like this in `.docx` or `.pdf` format or want a `README.md` file generated for direct download.
