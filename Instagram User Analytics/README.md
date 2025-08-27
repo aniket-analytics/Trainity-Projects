@@ -1,7 +1,3 @@
-Here’s a complete `README.md` for your **Instagram User Analytics** SQL project, following the same style as your **Retail Sales Analysis** README. You can copy this directly into a `README.md` file for GitHub or any portfolio:
-
----
-
 # 📊 Instagram User Analytics – SQL Project
 
 ## 🧾 Project Overview
