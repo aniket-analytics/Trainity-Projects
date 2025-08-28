@@ -162,7 +162,7 @@ The insights derived are valuable for marketing teams, business strategy, and pl
 
 ## 👨‍💻 Author – Aniket Yadav
 
-This project is part of my SQL portfolio demonstrating data analysis for social media platforms.
+> _This project is part of my SQL portfolio demonstrating data analysis for social media platforms._
 
 - **LinkedIn**: [Connect with me professionally](https://www.linkedin.com/in/aniket-yadav-/)
 - **Gmail**: [Connect with me professionally](mailto:andyyadav12@gmail.com)
