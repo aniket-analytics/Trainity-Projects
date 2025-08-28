@@ -39,9 +39,7 @@ This project analyzes the **hiring process** of a company to identify key trends
 **Goal**: Find the overall average salary offered in the company.  
 
 **Calculation**:  
-\[
-\text{Average Salary} = \frac{\text{Total Salary}}{\text{Number of Employees}}
-\]
+Average Salary = (Sum of all employee salaries) ÷ (Total number of employees)
 
 **Result**:  
 **Average Salary = 49,983.03**
