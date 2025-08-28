@@ -202,14 +202,11 @@ FROM (
 
 ---
 
-## 👨‍💻 Author
+## 👨‍💻 Author – Aniket Yadav
 
-**Aniket Yadav**
-📧 [Email me](mailto:andyyadav12@gmail.com)
-🔗 [LinkedIn Profile](https://www.linkedin.com/in/aniket-yadav-/)
+This project demonstrates advanced SQL for operations and metric investigation — showcasing how data-driven decisions improve platform efficiency and user experience.
 
----
+- **LinkedIn**: [Connect with me professionally](https://www.linkedin.com/in/aniket-yadav-/)
+- **Gmail**: [Connect with me professionally](mailto:andyyadav12@gmail.com)
 
-> *This project demonstrates advanced SQL for operations and metric investigation — showcasing how data-driven decisions improve platform efficiency and user experience.*
-
-```
+Thank you for your support, and I look forward to connecting with you!
