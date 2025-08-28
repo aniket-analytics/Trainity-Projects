@@ -32,7 +32,7 @@ This project analyzes the **hiring process** of a company to identify key trends
 
 ### 1️⃣ Gender distribution of hires(Male & Female)
 **Goal**: How many males and females have been hired by the company?
-![Gender distribution](https://raw.githubusercontent.com/aniket-analytics/Trainity-Projects/main/Hiring%20Process%20Analytics/Hiring%20Process%20Analytics.pptx.png)
+![Gender distribution](https://raw.githubusercontent.com/aniket-analytics/Trainity-Projects/main/Hiring%20Process%20Analytics/Task1.png)
 
 
 
