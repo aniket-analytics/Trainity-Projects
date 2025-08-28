@@ -82,7 +82,7 @@ Average Salary = (Sum of all employee salaries) ÷ (Total number of employees)
 
 ### 5️⃣ Post Tier Representation
 
-**Goal**: Categorize roles into post tiers (e.g., Operation, Service, Sales) and visualize.  
+**Goal**: Categorize roles into post tiers (e.g., b9, c5, c8) and visualize.  
 
 ![Post Tier Representation](https://raw.githubusercontent.com/aniket-analytics/Trainity-Projects/main/Hiring%20Process%20Analytics/Task4.png)
 
