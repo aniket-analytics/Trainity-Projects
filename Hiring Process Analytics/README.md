@@ -30,7 +30,8 @@ This project analyzes the **hiring process** of a company to identify key trends
 
 ## 🗂 Project Tasks
 
-### 1️⃣ Average Salary
+### 1️⃣ Gender distribution of hires(Male & Female)
+**Goal**:How many males and females have been hired by the company?
 
 
 ### 2️⃣ Average Salary
@@ -76,7 +77,7 @@ This project analyzes the **hiring process** of a company to identify key trends
 
 ---
 
-### 5⃣ Post Tier Representation
+### 5️⃣ Post Tier Representation
 
 **Goal**: Categorize roles into post tiers (e.g., Junior, Mid, Senior) and visualize.  
 
