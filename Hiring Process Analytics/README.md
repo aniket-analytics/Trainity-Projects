@@ -32,6 +32,9 @@ This project analyzes the **hiring process** of a company to identify key trends
 
 ### 1️⃣ Average Salary
 
+
+### 2️⃣ Average Salary
+
 **Goal**: Find the overall average salary offered in the company.  
 
 **Calculation**:  
@@ -44,7 +47,7 @@ This project analyzes the **hiring process** of a company to identify key trends
 
 ---
 
-### 2️⃣ Salary Distribution (Class Intervals)
+### 3️⃣ Salary Distribution (Class Intervals)
 
 **Goal**: Group salaries into slabs (class intervals).  
 
@@ -59,7 +62,7 @@ This project analyzes the **hiring process** of a company to identify key trends
 
 ---
 
-### 3️⃣ Department-Wise Analysis
+### 4️⃣ Department-Wise Analysis
 
 **Goal**: Use **Pie Chart / Bar Graph** to show proportion of employees across departments.  
 
@@ -73,7 +76,7 @@ This project analyzes the **hiring process** of a company to identify key trends
 
 ---
 
-### 4️⃣ Post Tier Representation
+### 5⃣ Post Tier Representation
 
 **Goal**: Categorize roles into post tiers (e.g., Junior, Mid, Senior) and visualize.  
 
