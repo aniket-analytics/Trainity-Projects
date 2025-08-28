@@ -111,12 +111,11 @@ This project analyzes the **hiring process** of a company to identify key trends
 
 ---
 
-## 👨‍💻 Author
-
-**Aniket Yadav**  
-📧 [Email me](mailto:andyyadav12@gmail.com)  
-🔗 [LinkedIn Profile](https://www.linkedin.com/in/aniket-yadav-/)  
-
----
+## 👨‍💻 Author – Aniket Yadav
 
 > _This project demonstrates beginner-level analytics on HR and hiring data, showcasing how simple Excel-based analysis can provide meaningful insights into hiring trends._
+
+- **LinkedIn**: [Connect with me professionally](https://www.linkedin.com/in/aniket-yadav-/)
+- **Gmail**: [Connect with me professionally](mailto:andyyadav12@gmail.com)
+
+Thank you for your support, and I look forward to connecting with you!
