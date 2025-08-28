@@ -61,6 +61,8 @@ Average Salary = (Sum of all employee salaries) ÷ (Total number of employees)
 | 350,000–400,000   | 400,000         | 1                  |
 | **Grand Total**   | **358,228,369** | **7167**           |
 
+![Salary distribution](https://raw.githubusercontent.com/aniket-analytics/Trainity-Projects/main/Hiring%20Process%20Analytics/Task2.png)
+
 ---
 
 ### 4️⃣ Department-Wise Analysis
@@ -74,6 +76,7 @@ Average Salary = (Sum of all employee salaries) ÷ (Total number of employees)
 - Sales – 25%  
 
 *(Exact proportions depend on dataset)*  
+![Department-Wise Analysis](https://raw.githubusercontent.com/aniket-analytics/Trainity-Projects/main/Hiring%20Process%20Analytics/Task3.png)
 
 ---
 
@@ -85,6 +88,7 @@ Average Salary = (Sum of all employee salaries) ÷ (Total number of employees)
 - Junior: 60%  
 - Mid-Level: 30%  
 - Senior: 10%  
+![Post Tier Representation](https://raw.githubusercontent.com/aniket-analytics/Trainity-Projects/main/Hiring%20Process%20Analytics/Task4.png)
 
 ---
 
