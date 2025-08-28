@@ -1,0 +1,79 @@
+"Task 1:- Gender distribution of hires(Male & Female)
+Goal: How many males and females have been hired by the company?",,
+,,
+,,
+Males Hired,2563,
+Females Hired,1856,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+"Task 2:- Average Salary
+Goal: Find the overall average salary offered in the company.",,
+,,
+,,
+Average Salary,49983.02902,
+,,
+"Task 3:- Salary Distribution (Class Intervals)
+Goal: Group salaries into slabs (class intervals).",,
+,,
+,,
+Salary Slab,Sum of Salary Slab,Count of Salary Slab
+0 - 49999,92457587,3611
+50000 - 99999,264870782,3553
+200000 - 249999,200000,1
+300000 - 349999,300000,1
+350000 - 400000,400000,1
+,0,0
+Grand Total,358228369,7167
+,,
+"Task 4:- Department-Wise Analysis
+Goal: Use Pie Chart / Bar Graph to show proportion of employees across departments.",,
+,,
+,,
+Department,Department (Count),
+Operations Department,2771,
+Service Department,2055,
+Sales Department,747,
+Production Department,380,
+Purchase Department,333,
+Marketing Department,325,
+Finance Department,288,
+General Management,172,
+Human Resource Department,97,
+,,
+,,
+,,
+,,
+,,
+,,
+"Task 5:- Post Tier Representation
+Goal: Categorize roles into post tiers (e.g., b9, c5, c8) and visualize.",,
+,,
+,,
+Post Name,Count,
+-,1,
+b9,308,
+c-10,105,206.5
+c5,1182,643.5
+c8,193,687.5
+c9,1239,716
+i1,151,695
+i4,32,91.5
+i5,511,271.5
+i6,337,424
+i7,635,486
+m6,2,318.5
+n6,1,1.5
