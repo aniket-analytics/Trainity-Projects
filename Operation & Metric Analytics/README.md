@@ -1,4 +1,4 @@
-# ⚙️ SQL Project – Operation Analytics & Investigating Metric Spike
+# ⚙️ Operation Analytics & Investigating Metric Spike
 
 ## 🧾 Project Overview
 
