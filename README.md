@@ -32,7 +32,7 @@ This repository showcases my ability to **analyze datasets, write SQL queries, b
 - **Insights**:
   - Clear engagement patterns across users.
   - Bots & fake accounts can be flagged easily.  
-👉 [Project README](./Instagram-User-Analytics/README.md)
+👉 [Project README](./Instagram%20User%20Analytics/README.md)
 
 ---
 
