@@ -36,6 +36,7 @@ This project analyzes IMDB movie data to identify top-rated films, directors, ge
 ### 1️⃣ Highest Profit Movies
 - Analyzed revenue vs. cost columns.  
 - Identified **most profitable films** in dataset.  
+![](https://raw.githubusercontent.com/aniket-analytics/Trainity-Projects/main/IMDB%20Movie%20Analysis/Task1.png)
 
 ---
 
@@ -52,12 +53,14 @@ This project analyzes IMDB movie data to identify top-rated films, directors, ge
 ### 3️⃣ Top 10 Directors
 - Ranked by total ratings and votes across their films.  
 - Highlighted consistent high-performers.  
+![](https://raw.githubusercontent.com/aniket-analytics/Trainity-Projects/main/IMDB%20Movie%20Analysis/Task2.png)
 
 ---
 
 ### 4️⃣ Popular Genres
 - Action, Drama, Thriller, Comedy emerged as dominant categories.  
 - Drama + Action had highest cross-over impact.  
+![](https://raw.githubusercontent.com/aniket-analytics/Trainity-Projects/main/IMDB%20Movie%20Analysis/Task3.png)
 
 ---
 
@@ -70,6 +73,8 @@ This project analyzes IMDB movie data to identify top-rated films, directors, ge
 ### 6️⃣ Decade-Wise Voting Trend
 - Aggregated total votes by decade.  
 - Shows **modern movies attract more engagement**, but classics retain high ratings.  
+![](https://raw.githubusercontent.com/aniket-analytics/Trainity-Projects/main/IMDB%20Movie%20Analysis/Task4a.png)
+![](https://raw.githubusercontent.com/aniket-analytics/Trainity-Projects/main/IMDB%20Movie%20Analysis/Task4b.png)
 
 ---
 
