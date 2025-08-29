@@ -35,7 +35,7 @@ This repository showcases my ability to **analyze datasets, write SQL queries, b
   - Throughput smoother when tracked via rolling avg.
   - User retention reveals product stickiness.
   - Email engagement varies significantly by type.  
-👉 [Project README](./Operation%20Analytics%20&%20/README.md)
+👉 [Project README](./Operation%20&%20Metric%20Analytics/README.md)
 
 ---
 
