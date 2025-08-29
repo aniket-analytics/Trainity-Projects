@@ -75,10 +75,9 @@ This project analyzes TV advertisement airing patterns across different brands. 
 
 ---
 
-## 👨‍💻 Author
+## 👨‍💻 Author – Aniket Yadav
 
-**Aniket Yadav**  
-📧 [Email me](mailto:andyyadav12@gmail.com)  
-🔗 [LinkedIn Profile](https://www.linkedin.com/in/aniket-yadav-/)  
+- **LinkedIn**: [Connect with me professionally](https://www.linkedin.com/in/aniket-yadav-/)
+- **Gmail**: [Connect with me professionally](mailto:andyyadav12@gmail.com)
 
----
+Thank you for your support, and I look forward to connecting with you!
