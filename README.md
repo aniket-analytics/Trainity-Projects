@@ -7,20 +7,7 @@ This repository showcases my ability to **analyze datasets, write SQL queries, b
 
 ## 📂 Projects Included
 
-### 1️⃣ Retail Sales Analysis
-- **Database**: `retail_db`  
-- **Tech Stack**: MySQL  
-- **Key Insights**:
-  - Customer demographics by age & gender.
-  - Clothing & Electronics were top-selling categories.
-  - Evening sales shift had peak transactions.
-  - Top 5 loyal customers identified.  
-- **Reports**: Sales by category, customer loyalty, monthly trends.  
-👉 [Project README](./Retail-Sales-Analysis/README.md)
-
----
-
-### 2️⃣ Instagram User Analytics
+### 1️⃣ Instagram User Analytics
 - **Database**: `ig_clone`  
 - **Tech Stack**: MySQL  
 - **Key Queries**:
@@ -36,7 +23,7 @@ This repository showcases my ability to **analyze datasets, write SQL queries, b
 
 ---
 
-### 3️⃣ Operation Analytics & Metric Spike Investigation
+### 2️⃣ Operation Analytics & Metric Spike Investigation
 - **Database**: `job_data`, `tutorial.yammer_*`  
 - **Tech Stack**: PostgreSQL, Mode SQL  
 - **Key Queries**:
@@ -48,11 +35,11 @@ This repository showcases my ability to **analyze datasets, write SQL queries, b
   - Throughput smoother when tracked via rolling avg.
   - User retention reveals product stickiness.
   - Email engagement varies significantly by type.  
-👉 [Project README](./Operation-Analytics/README.md)
+👉 [Project README](./Operation%20Analytics%20&%20/README.md)
 
 ---
 
-### 4️⃣ Hiring Process Analytics
+### 3️⃣ Hiring Process Analytics
 - **Dataset**: HR Salary & Hiring Data  
 - **Tech Stack**: Excel (WPS Office)  
 - **Key Tasks**:
@@ -63,7 +50,24 @@ This repository showcases my ability to **analyze datasets, write SQL queries, b
 - **Insights**:
   - Hiring dominated by entry-level roles.
   - Few high-salary outliers exist.  
-👉 [Project README](./Hiring-Process-Analytics/README.md)
+👉 [Project README](./Hiring%20Process%20Analytics/README.md)
+
+---
+
+### 4️⃣ IMDB Movie Analysis
+- **Dataset**: IMDB Top Movies Dataset  
+- **Tech Stack**: Excel (Pivot Analysis)  
+- **Key Tasks**:
+  - Highest profit movies.
+  - IMDB Top 20 movies.
+  - Top 10 directors & popular genres.
+  - Critic-favorite vs Audience-favorite actors.
+  - Votes aggregated by decade.  
+- **Insights**:
+  - Shawshank Redemption = highest rated.
+  - Drama & Action dominate genres.
+  - Audience engagement increases sharply in modern films.  
+👉 [Project README](./IMDB%20Movie%20Analysis/README.md)
 
 ---
 
@@ -78,24 +82,7 @@ This repository showcases my ability to **analyze datasets, write SQL queries, b
 - **Insights**:
   - Maruti Suzuki dominated 2021 campaigns.
   - Daypart diversity = higher visibility.  
-👉 [Project README](./XYZ-Ads-Airing/README.md)
-
----
-
-### 6️⃣ IMDB Movie Analysis
-- **Dataset**: IMDB Top Movies Dataset  
-- **Tech Stack**: Excel (Pivot Analysis)  
-- **Key Tasks**:
-  - Highest profit movies.
-  - IMDB Top 20 movies.
-  - Top 10 directors & popular genres.
-  - Critic-favorite vs Audience-favorite actors.
-  - Votes aggregated by decade.  
-- **Insights**:
-  - Shawshank Redemption = highest rated.
-  - Drama & Action dominate genres.
-  - Audience engagement increases sharply in modern films.  
-👉 [Project README](./IMDB-Movie-Analysis/README.md)
+👉 [Project README](./XYZ%20Ads%20Airing/README.md)
 
 ---
 
