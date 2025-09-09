@@ -25,7 +25,7 @@ This repository showcases my ability to **analyze datasets, write SQL queries, b
 
 ### 2️⃣ Operation Analytics & Metric Spike Investigation
 - **Database**: `job_data`, `tutorial.yammer_*`  
-- **Tech Stack**: PostgreSQL, Mode SQL  
+- **Tech Stack**: PostgreSQL, MySQL  
 - **Key Queries**:
   - Throughput & 7-day rolling averages.
   - Duplicate job detection.
