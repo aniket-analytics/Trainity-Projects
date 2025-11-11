@@ -98,7 +98,7 @@ This repository showcases my ability to **analyze datasets, write SQL queries, b
 
 **Aniket Yadav**  
 - **LinkedIn**: [Connect with me professionally](https://www.linkedin.com/in/aniket-yadav-/)
-- **Gmail**: [Connect with me professionally](mailto:andyyadav12@gmail.com)
+- **Gmail**: [Connect with me professionally](mailto:aniket.analytics1210@gmail.com)
 - **Github**: [Connect with me professionally](https://github.com/aniket-analytics)
 
 ---
